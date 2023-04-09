@@ -40,22 +40,21 @@ In this challenge, I will use my knowledge of SparkSQL to determine key metrics 
 ![Screen Shot 2023-04-09 at 01 51 04](https://user-images.githubusercontent.com/116304118/230748675-4898d07d-5e83-4cea-8e09-207910072f90.png)
 
 
-### Cache your temporary table home_sales.
+#### Cache my temporary table home_sales and check if my temporary table is cached.
 
-Check if your temporary table is cached.
+![Screen Shot 2023-04-09 at 01 31 16](https://user-images.githubusercontent.com/116304118/230748759-b7ffc3a5-eb4a-4638-9a60-a0189ba07639.png)
 
-Using the cached data, run the query that filters out the view ratings with an average price of greater than or equal to $350,000. Determine the runtime and compare it to uncached runtime.
+I Used the cached data to run the query that filters out the view ratings with an average price of greater than or equal to $350,000. I also determined the runtime and compare it to the uncached runtime.
 
-Partition by the "date_built" field on the formatted parquet home sales data.
+--- 0.3426980972290039 seconds ---
 
-Create a temporary table for the parquet data.
+The home sales dataset was partitioned by the "date_built" field on the formatted parquet home sales data. I then created a temporary table for the parquet data. After this, I ran the query that filters out the view ratings with an average price of greater than or equal to $350,000. The runtimewas determinded and compared to the uncached runtime.
 
-Run the query that filters out the view ratings with an average price of greater than or equal to $350,000. Determine the runtime and compare it to uncached runtime.
+--- 0.3578789234161377 seconds ---
 
-Uncache the home_sales temporary table.
+#### Uncache the home_sales temporary table and verify that the home_sales temporary table is uncached using PySpark.
 
-Verify that the home_sales temporary table is uncached using PySpark.
+![Screen Shot 2023-04-09 at 01 31 31](https://user-images.githubusercontent.com/116304118/230748960-5f5b12a7-8acd-4607-976e-df3165cc973e.png)
 
-Download your Home_Sales.ipynb file and upload it into your "Home_Sales" GitHub repository.
 
 
